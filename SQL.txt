@@ -1,0 +1,56 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Aug 09, 2018 at 04:43 PM
+-- Server version: 5.1.36
+-- PHP Version: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `blog`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `client`
+--
+
+CREATE TABLE IF NOT EXISTS `client` (
+  `cid` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `client` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `client`
+--
+
+INSERT INTO `client` (`cid`, `name`, `client`) VALUES
+(1, 'Ankit Goyal', 'Ankit Goyal,<br>DIT University'),
+(2, 'Big Feast', 'Big Feast<br>Dehradun<br>'),
+(3, 'Jiwan Soap', 'Bareilly');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `invoice`
+--
+
+CREATE TABLE IF NOT EXISTS `invoice` (
+  `cid` int(11) NOT NULL,
+  `project` varchar(30) NOT NULL,
+  `description` varchar(300) NOT NULL,
+  `amount` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `invoice`
+--
+
+INSERT INTO `invoice` (`cid`, `project`, `description`, `amount`) VALUES
+(3, 'Website Development', 'Website Development for Jiwan Soap', 9440);
+
